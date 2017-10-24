@@ -1,0 +1,27 @@
+﻿@using Project.Web.Models;
+@model List<Product>
+
+@{
+    Layout = "~/Shared/_Layout.cshtml";
+}
+
+
+<h2>Meditation - Transforming the mind.</h2>
+
+@foreach (Product product in Model)
+{
+    <div class="productDisplay">
+        <a href="@Url.Action("Detail","MeditationListModel", new { id = product.ProductId})">
+            <img class="imageSize" src="@Url.Content("~/Content/images/"+ product.ImageName)" />
+        </a>
+
+
+        <div class="itemDetails">
+            <h3>@product.Name</h3>
+            <p class="price"><strong> $@product.Price</strong></p>
+        </div>
+
+        <div style="clear:both;"></div>
+    </div>
+    <hr class="lineStyle" />
+}

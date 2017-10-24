@@ -1,0 +1,30 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Shared/_Layout.cshtml";
+}
+
+<section>
+
+        <div>
+            <h2>@Html.ActionLink("Meditation", "MeditationList", "Home")</h2>
+            <img class="IndexImages" src="~/Content/Images/Meditation.jpg" />
+        </div>
+
+        <div>
+            <h2>@Html.ActionLink("Stress Relief", "StressReliefList", "Home")</h2>
+            <img class="IndexImages" src="~/Content/Images/Stress.jpg"/>
+        </div>
+
+        <div>
+            <h2>@Html.ActionLink("Body Care", "BodyCareList", "Home")</h2>
+            <img class="IndexImages" src="~/Content/Images/Body Care.jpg" />
+        </div>
+
+        <div>
+            <h2>@Html.ActionLink("Exercise", "ExerciseList", "Home")</h2>
+            <img class="IndexImages" src="~/Content/Images/Exercise.jpg" />
+    </div>
+
+</section>
